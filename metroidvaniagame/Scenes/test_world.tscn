@@ -1,0 +1,60 @@
+[gd_scene load_steps=4 format=3 uid="uid://drpop1e2su0rf"]
+
+[ext_resource type="Texture2D" uid="uid://didq6rm6j5ebo" path="res://Art/icon.svg" id="1_skmq4"]
+[ext_resource type="PackedScene" uid="uid://b6o0qitpcepql" path="res://Scenes/player.tscn" id="2_au00k"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_au00k"]
+size = Vector2(129, 128)
+
+[node name="TestWorld" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(581, 630)
+scale = Vector2(22.41, 0.4)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor"]
+texture = ExtResource("1_skmq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_au00k")
+
+[node name="Floor2" type="StaticBody2D" parent="."]
+position = Vector2(102, 577)
+scale = Vector2(2.275, 0.4)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor2"]
+texture = ExtResource("1_skmq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor2"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_au00k")
+
+[node name="Floor3" type="StaticBody2D" parent="."]
+position = Vector2(-196, 474)
+scale = Vector2(2.275, 0.4)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor3"]
+texture = ExtResource("1_skmq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor3"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_au00k")
+
+[node name="Floor4" type="StaticBody2D" parent="."]
+position = Vector2(1335, 552)
+scale = Vector2(2.275, 0.77)
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="Floor4"]
+texture = ExtResource("1_skmq4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor4"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_au00k")
+
+[node name="Player" parent="." instance=ExtResource("2_au00k")]
+position = Vector2(792, 540)
