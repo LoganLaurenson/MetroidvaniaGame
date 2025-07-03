@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
-	if Input.is_action_just_pressed("Jump") and is_on_floor || !coyote_timer.is_stopped():
+	if Input.is_action_just_pressed("Jump") and is_on_floor() || !coyote_timer.is_stopped():
 		jump_height_timer.start() 
 		velocity.y = JUMP_VELOCITY
 
